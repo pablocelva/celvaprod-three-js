@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vite gh-pages"
+  },
+  "dependencies": {
+    "three": "^0.167.1",
+    "vite": "^5.4.2"
+  },
+  "devDependencies": {
+    "vite-plugin-gh-pages": "^1.0.0"
+  }
+}
