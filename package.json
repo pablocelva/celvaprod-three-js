@@ -2,13 +2,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "vite gh-pages"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "three": "^0.167.1",
     "vite": "^5.4.2"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "vite-plugin-gh-pages": "^1.0.0"
   }
 }
