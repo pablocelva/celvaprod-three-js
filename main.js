@@ -63,9 +63,10 @@ const ambientLight = new THREE.AmbientLight(0xf62456, 1.5)
 scene.add(ambientLight)
 
 //3D OBJECT
+let mesh = null
 const loader = new GLTFLoader().setPath('/celvaprod-three-js/microfono/')
 loader.load('scene.gltf', (gltf) => {
-    const mesh = gltf.scene
+    mesh = gltf.scene
     
     mesh.traverse((node) => {
         if (node.isMesh) {
@@ -102,6 +103,11 @@ window.addEventListener('resize', () => {
 //RENDER LOOP
 function animate() {
     requestAnimationFrame(animate)
+
+    if (mesh) {
+        mesh.rotation.y += 0.01
+    }
+    
     controls.update()
     renderer.render(scene, camera)
 }
