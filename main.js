@@ -64,7 +64,7 @@ scene.add(ambientLight)
 
 //3D OBJECT
 const loader = new GLTFLoader().setPath('/celvaprod-three-js/microfono/')
-loader.load('/celvaprod-three-js/microfono/scene.gltf', (gltf) => {
+loader.load('scene.gltf', (gltf) => {
     const mesh = gltf.scene
     
     mesh.traverse((node) => {
