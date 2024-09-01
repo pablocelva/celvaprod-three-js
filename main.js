@@ -41,7 +41,7 @@ groundMesh.receiveShadow = true
 //new RGBELoader().load('enviorments/green_sanctuary_4k.hdr', (enviormentMap) => {
 //new RGBELoader().load('enviorments/rosendal_park_sunset_puresky_4k.hdr', (enviormentMap) => {
 //new RGBELoader().load('enviorments/hilly_terrain_01_puresky_4k.hdr', (enviormentMap) => {
-new RGBELoader().load('./enviorments/river_walk_1_4k.hdr', (enviormentMap) => {
+new RGBELoader().load('/celvaprod-three-js/enviorments/river_walk_1_4k.hdr', (enviormentMap) => {
 //new RGBELoader().load('enviorments/rainforest_trail_4k.hdr', (enviormentMap) => {
     enviormentMap.mapping = THREE.EquirectangularReflectionMapping
     scene.background = enviormentMap
@@ -63,8 +63,8 @@ const ambientLight = new THREE.AmbientLight(0xf62456, 1.5)
 scene.add(ambientLight)
 
 //3D OBJECT
-const loader = new GLTFLoader().setPath('/microfono/')
-loader.load('./microfono/scene.gltf', (gltf) => {
+const loader = new GLTFLoader().setPath('/celvaprod-three-js/microfono/')
+loader.load('/celvaprod-three-js/microfono/scene.gltf', (gltf) => {
     const mesh = gltf.scene
     
     mesh.traverse((node) => {
